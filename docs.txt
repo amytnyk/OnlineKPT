@@ -1,0 +1,67 @@
+Vehicle list    - https://online.kpt.kyiv.ua/api/vehicle/list
+Stop list       - https://online.kpt.kyiv.ua/api/stop/list
+Route list      - https://online.kpt.kyiv.ua/api/route/list
+Locations list  - https://online.kpt.kyiv.ua/socket.io/?EIO=3&transport=polling
+Route view      - https://online.kpt.kyiv.ua/api/route/view?id={route_id}
+
+Transport types:
+    1 - tram,
+    2 - trolleybus,
+    3 - bus,
+    4 - train,
+    9 - route taxi,
+    20 - metro
+
+Location list items:
+    vehicle_id,
+    route_id,
+    lat,
+    lng,
+    speed,
+    dir,
+    time
+
+Route list items:
+    id (route_id),
+    type,
+    number 
+
+Stop list items:
+    id,
+    type,
+    name,
+    lat,
+    lng
+
+Vehicle list items:
+    id,
+    type,
+    name,
+    is_spec
+
+Route view:
+    id,
+    type,
+    number,
+    info:
+        desc,
+        length,
+        is_spec,
+        has_wifi,
+        interval,
+        working_days,
+        cost
+    path:
+        forward,
+        backward
+    stops:
+        stop:
+            id,
+            type,
+            name,
+            lat,
+            lng
+        dir,
+        pos
+
+lat, lng epsilon - 0.003
